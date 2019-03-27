@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Informatykierzy</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="jquery-3.2.1.min.js"></script> 
+    <script src="onClick.js"></script>
+    </head>
+
+<body>
+    <div id="container">
+        <div class="left">
+            <div class="circles">
+                <div id="circle1" onclick="click()">
+                    <div class="text">Podpowiedź</div>
+                </div>
+                <div id="circle2">
+                    <div class="text">Ekspertyza</div>
+                </div>
+                <div id="circle3">
+                    <div class="text">Pół na pół</div>
+                </div>
+            </div>
+            <div class="logo"><img src="logo.png" alt="logo"></div>
+
+            <div class="qasection">
+                <div class="question">Co oznacza skrót MBR, dotyczący urządzeń techniki komputerowej?</div>
+                <div class="flex-anwser">
+                    <form>
+                        <input type="submit" name="firstquestion" value="A: Główny rekord rozruchowy SO" class="first anwser" onclick="zmien_tlo()"> </form>
+                    <form>
+                        <input type="submit" name="secondquestion" value="B: Fizyczny adres karty sieciowej" class="second anwser" > </form>
+                    <form>
+                        <input type="submit" name="thirdquestion" value="C: Bloki pamięci górnej komputera IBM/PC" class="third anwser"> </form>
+                    <form>
+                        <input type="submit" name="fourthquestion" value="D: Usługę związaną z tłumaczeniem nazw domeny" class="fourth anwser"> </form>
+                </div>
+                <div id="buttons">
+                    <input type="submit" name="check" value="Sprawdzenie" class="check">
+                    <input type="submit" name="newgame" value="Nowa Gra" class="check2">
+                </div></div>
+        </div>
+            <div class="amount">
+                <li class="guaranteed">1 000 000 zł</li>
+                <li>500 000 zł</li>
+                <li>250 000 zł</li>
+                <li>125 000 zł</li>
+                <li>75 000 zł</li>
+                <li class="guaranteed">40 000 zł</li>
+                <li>20 000 zł</li>
+                <li>10 000 zł</li>
+                <li>5000 zł</li>
+                <li>2000 zł</li>
+                <li class="guaranteed">1000 zł</li>
+                <li>500 zł</li>
+            </div>
+        </div>
+</body>
+
+</html>
