@@ -3,8 +3,6 @@ version: '3'
 services:
   mysql_5_5:
     image: mysql:5.5
-    container_name: db-mysql-55
+    container_name: informatykierzy_sql
     environment:
       MYSQL_ALLOW_EMPTY_PASSWORD: 1
-    volumes:
-      - mysql_5_5:/var/lib/mysql
