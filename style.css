@@ -94,7 +94,7 @@ li:first-child{
     outline: none !important;
     width: 450px;
     padding: 10px;
-    border-radius: 7.5px;
+    border-radius: 5px;
     font-size: 18px;
     color: #e0e0e0;
     margin: 10px 10px;
@@ -120,7 +120,7 @@ li:first-child{
     left: 40px;
 }
 
-#circle1, #circle2, #circle3 {
+.circle {
     margin: 10px auto;
     width: 80px;
     height: 60px;
@@ -130,26 +130,17 @@ li:first-child{
     display: flex;
     justify-content: center;
     align-items: center;
-}
-
-#circle1:hover{
-    cursor: pointer;
-}
-
-#circle2:hover{
-    cursor: pointer;
-}
-
-#circle3:hover{
-    cursor: pointer;
-}
-
-.text {
     font-size: 11px;
     color: white;
     text-align: justify;
-    
+    font-weight: 600;
 }
+
+.circle:hover{
+    cursor: pointer;
+}
+
+
 
 /*buttons */ 
 
@@ -159,7 +150,7 @@ li:first-child{
     outline: none !important;
     width: 180px;
     padding: 10px;
-    border-radius: 5px;
+    border-radius: 3.5px;
     font-size: 18px;
     color: #e0e0e0;
     margin: 10px 10px;
