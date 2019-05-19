@@ -19,6 +19,16 @@ class QuesitonRepository extends ServiceEntityRepository
         parent::__construct($registry, Quesiton::class);
     }
 
+    public function getByDiffLevel(int $level)
+    {
+        return $this->createQueryBuilder('q')
+            ->where('q.level = :level')
+            ->setParameter('level', $level)
+            ->setMaxResults(1)
+            ->getQuery()
+            ->getOneOrNullResult();
+    }
+
     // /**
     //  * @return Quesiton[] Returns an array of Quesiton objects
     //  */
