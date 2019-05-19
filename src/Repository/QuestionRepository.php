@@ -2,21 +2,15 @@
 
 namespace App\Repository;
 
-use App\Entity\Quesiton;
+use App\Entity\Question;
 use Doctrine\Bundle\DoctrineBundle\Repository\ServiceEntityRepository;
 use Symfony\Bridge\Doctrine\RegistryInterface;
 
-/**
- * @method Quesiton|null find($id, $lockMode = null, $lockVersion = null)
- * @method Quesiton|null findOneBy(array $criteria, array $orderBy = null)
- * @method Quesiton[]    findAll()
- * @method Quesiton[]    findBy(array $criteria, array $orderBy = null, $limit = null, $offset = null)
- */
-class QuesitonRepository extends ServiceEntityRepository
+class QuestionRepository extends ServiceEntityRepository
 {
     public function __construct(RegistryInterface $registry)
     {
-        parent::__construct($registry, Quesiton::class);
+        parent::__construct($registry, Question::class);
     }
 
     public function getByDiffLevel(int $level)
@@ -24,9 +18,9 @@ class QuesitonRepository extends ServiceEntityRepository
         return $this->createQueryBuilder('q')
             ->where('q.level = :level')
             ->setParameter('level', $level)
-            ->setMaxResults(1)
+//            ->setMaxResults(1)
             ->getQuery()
-            ->getOneOrNullResult();
+            ->getResult();
     }
 
     // /**
