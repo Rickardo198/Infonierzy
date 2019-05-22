@@ -4,6 +4,7 @@ class Game {
         this.question = {};
         this.win = false;
         this.lose = false;
+        this.guaranteed = 0;
     };
     getQuestion(){
         $.ajax({
@@ -31,6 +32,9 @@ class Game {
             this.getQuestion();
             $('.shaddy').addClass('active');
             $('.correct').addClass('active');
+            if(guaranteed.indexOf(this.currentLevel-2)!==-1){
+                this.guaranteed = prices[this.currentLevel-2];
+            }
             setTimeout(function(){
                 $('.shaddy').removeClass('active');
                 $('.correct').removeClass('active');
@@ -43,7 +47,6 @@ class Game {
         this.lose = true;
         $('.shaddy').addClass('active');
         $('.zufall').addClass('active');
-        //TODO: Will be refreshing web on click NEWGAME
     }
     confirmAnswer(selected){
         if(selected===this.question.correct){
@@ -56,6 +59,9 @@ class Game {
     }
 
 }
+
+const prices = ["500","1000","2000","5000","10.000","20.000","40.000","75.000","125.000","250.000","500.000","1.000.000"];
+const guaranteed = [1,6,11];
 
 let game = new Game();
 game.getQuestion();
