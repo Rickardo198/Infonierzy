@@ -5,9 +5,24 @@
     <meta charset="UTF-8">
     <title>Informatykierzy</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="static.css">
 </head>
 
 <body>
+
+<div class="shaddy"></div>
+<div class="correct box">
+    <p class="header">POPRAWNA ODPOWIEDŹ &#128526;</p>
+    <p class="sub">Idziesz jak burza!</p>
+</div>
+<div class="zufall box">
+    <p class="header">NIEPOPRAWNA ODPOWIEDŹ</p>
+    <p class="sub">Niestety, ale nie udało Ci się zgarnąć miliona &#128531;</p>
+    <div class="new-game">
+        <span>NOWA GRA</span>
+    </div>
+</div>
+
 <div id="container">
     <div class="left">
         <div class="circles">
@@ -27,14 +42,19 @@
             <div class="question">Co oznacza skrót MBR, dotyczący urządzeń techniki komputerowej?</div>
             <div class="flex-anwser">
                 <form>
-                    <input type="submit" name="firstquestion" value="A: Główny rekord rozruchowy SO" class="first answer" id="a"> </form>
+                    <input type="submit" name="firstquestion" value="A: Główny rekord rozruchowy SO"
+                           class="first answer" id="a"></form>
                 <form>
-                    <input type="submit" name="secondquestion" value="B: Fizyczny adres karty sieciowej" class="second answer" id="b" > </form>
+                    <input type="submit" name="secondquestion" value="B: Fizyczny adres karty sieciowej"
+                           class="second answer" id="b"></form>
                 <form>
-                    <input type="submit" name="thirdquestion" value="C: Bloki pamięci górnej komputera IBM/PC" class="third answer" id="c"> </form>
+                    <input type="submit" name="thirdquestion" value="C: Bloki pamięci górnej komputera IBM/PC"
+                           class="third answer" id="c"></form>
                 <form>
-                    <input type="submit" name="fourthquestion" value="D: Usługę związaną z tłumaczeniem nazw domeny" class="fourth answer" id="d"> </form>
-            </div></div>
+                    <input type="submit" name="fourthquestion" value="D: Usługę związaną z tłumaczeniem nazw domeny"
+                           class="fourth answer" id="d"></form>
+            </div>
+        </div>
     </div>
     <div class="amount">
         <li class="guaranteed">1 000 000 zł</li>
@@ -54,15 +74,15 @@
 
 <script type="text/javascript">
     let circles = document.querySelectorAll('.circle');
-    circles.forEach((circle) =>{
-        circle.addEventListener('click', () =>{
+    circles.forEach((circle) => {
+        circle.addEventListener('click', () => {
             circle.animate([{
-                background : "#482b7f",
+                background: "#482b7f",
                 opacity: 1,
                 color: "white"
             },
                 {
-                    background : "#ececec",
+                    background: "#ececec",
                     opacity: ".8",
                     color: "#482b7f"
                 }

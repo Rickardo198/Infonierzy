@@ -1,0 +1,73 @@
+/*Bartek robi style do takich okienek*/
+@keyframes gameLost {
+    from {
+        opacity: 0;
+        transform: rotateY(90deg);
+    }
+    to {
+        opacity: 1;
+        transform: rotateY(0deg);
+    }
+}
+
+.box {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 100vw;
+    height: 200px;
+    background: #FFF;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    z-index: 10;
+    -webkit-backface-visibility: hidden;
+}
+.box .header {
+    color: #FFF;
+    font-size: 40px;
+    font-weight: 500;
+}
+.box .sub {
+    color: #FFF;
+    font-size: 25px;
+    font-weight: 300;
+}
+.shaddy {
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background: rgba(0,0,0,0.8);
+    z-index: 9;
+}
+
+.new-game {
+    padding: 10px 25px;
+    border: 2px solid #FFF;
+    border-radius: 5px;
+    color: #FFF;
+    display: flex;
+    font-weight: 400;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+    transition: .2s ease;
+    cursor: pointer;
+}
+.new-game:hover {
+    background: #FFF;
+    color: #e67e22;
+}
+
+.box.correct {
+    background: #1abc9c;
+}
+.box.zufall {
+    background: #e67e22;
+    animation: gameLost 0.5s ease;
+}
