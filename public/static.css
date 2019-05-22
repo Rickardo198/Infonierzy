@@ -161,3 +161,17 @@
     pointer-events: all;
     opacity: 1;
 }
+
+.copyright {
+    color: rgba(255,255,255,0.3);
+    font-size: 15px;
+    text-transform: uppercase;
+    position: absolute !important;
+    bottom: 0;
+    right: 0 !important;
+    margin: auto;
+    left: 0 !important;
+    text-align: center;
+    transform: translateY(-20px);
+    z-index: 100;
+}
