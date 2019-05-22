@@ -35,6 +35,8 @@ class Game {
             if(guaranteed.indexOf(this.currentLevel-2)!==-1){
                 this.guaranteed = prices[this.currentLevel-2];
             }
+            $('.correct > .sub').html(goodVibes[Math.floor(Math.random()*goodVibes.length-1)]);
+            $('.zufall > .sub').html(negativeVibes[Math.floor(Math.random()*negativeVibes.length-1)]);
             setTimeout(function(){
                 $('.shaddy').removeClass('active');
                 $('.correct').removeClass('active');
@@ -62,6 +64,19 @@ class Game {
 
 const prices = ["500","1000","2000","5000","10.000","20.000","40.000","75.000","125.000","250.000","500.000","1.000.000"];
 const guaranteed = [1,6,11];
+const goodVibes = [
+    "Idziesz jak burza! &#127785;",
+    "Oby tak dalej! &#128522;",
+    "Niemożliwe!!! &#128516;",
+    "Szansa na milion coraz bliżej! &#128519;",
+    "Dasz radę! &#128519;"
+];
+
+const negativeVibes = [
+    "Tym razem się nie udało, przykro nam &#128554;",
+    "Zawsze możesz zagrać jeszcze raz &#128527;",
+    "Następnym razem będzie lepiej &#128527;"
+]
 
 let game = new Game();
 game.getQuestion();
