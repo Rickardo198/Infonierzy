@@ -104,7 +104,7 @@ li:first-child{
 }
 .answer{
     background: transparent;
-    border: .8px solid #c4c4c4;
+    border: 1px solid #FFF;
     outline: none !important;
     width: 450px;
     padding: 10px;
@@ -113,6 +113,11 @@ li:first-child{
     color: #e0e0e0;
     margin: 10px 10px;
     transition: all .3s ease;
+}
+.answer.selected {
+    background: #e67e22 !important;
+    border: 1px solid #e67e22 !important;
+    color: #FFF !important;
 }
 .first, .second{
     margin-top: 30px;
