@@ -1,12 +1,10 @@
 /*Bartek robi style do takich okienek*/
 @keyframes gameLost {
     from {
-        opacity: 0;
-        transform: rotateY(90deg);
+
     }
     to {
-        opacity: 1;
-        transform: rotateY(0deg);
+
     }
 }
 
@@ -24,6 +22,7 @@
     margin: auto;
     z-index: 10;
     -webkit-backface-visibility: hidden;
+    transition: .5s ease;
 }
 .box .header {
     color: #FFF;
@@ -43,6 +42,13 @@
     left: 0;
     background: rgba(0,0,0,0.8);
     z-index: 9;
+    opacity: 0;
+    transition: 0.5s ease;
+    pointer-events: none;
+}
+.shaddy.active {
+    pointer-events: all;
+    opacity: 1;
 }
 
 .new-game {
@@ -66,8 +72,19 @@
 
 .box.correct {
     background: #1abc9c;
+    opacity: 0;
+    transform: rotateY(90deg);
+}
+.box.correct.active {
+    opacity: 1;
+    transform: rotateY(0deg);
 }
 .box.zufall {
     background: #e67e22;
-    animation: gameLost 0.5s ease;
+    opacity: 0;
+    transform: rotateY(90deg);
+}
+.box.zufall.active {
+    opacity: 1;
+    transform: rotateY(0deg);
 }

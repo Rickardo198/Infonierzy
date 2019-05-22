@@ -17,6 +17,8 @@ class Game {
                 $('.third').val(data.answerC);
                 $('.fourth').val(data.answerD);
                 $('.question').html(data.title);
+                $($('.amount > li')[12-this.currentLevel+1]).removeClass('active');
+                $($('.amount > li')[12-this.currentLevel]).addClass('active');
             },
             error: function(e){
                 throw new Error('Fetching error 0x01');
@@ -27,12 +29,20 @@ class Game {
         if(this.currentLevel<12){
             this.currentLevel++;
             this.getQuestion();
+            $('.shaddy').addClass('active');
+            $('.correct').addClass('active');
+            setTimeout(function(){
+                $('.shaddy').removeClass('active');
+                $('.correct').removeClass('active');
+            },1000);
         } else {
             this.win = true;
         }
     }
     loseGame() {
         this.lose = true;
+        $('.shaddy').addClass('active');
+        $('.zufall').addClass('active');
         //TODO: Will be refreshing web on click NEWGAME
     }
     confirmAnswer(selected){
@@ -55,4 +65,8 @@ $('.answer').click(function(e){
     e.preventDefault();
     const selectedAnswer = $(this).attr('id');
     game.confirmAnswer(selectedAnswer);
+});
+
+$('.new-game').click(function(){
+    window.location.reload();
 });
