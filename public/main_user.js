@@ -36,14 +36,18 @@ class Game {
                 this.guaranteed = prices[this.currentLevel-2];
             }
             $('.correct > .sub').html(goodVibes[Math.floor(Math.random()*goodVibes.length-1)]);
-            $('.zufall > .sub').html(negativeVibes[Math.floor(Math.random()*negativeVibes.length-1)]);
+            $('.zufall > .sub').html(negativeVibes[Math.floor(Math.random()*negativeVibes.length-1)] + " Masz "+this.guaranteed+"zł");
             setTimeout(function(){
                 $('.shaddy').removeClass('active');
                 $('.correct').removeClass('active');
             },1000);
         } else {
             this.win = true;
+            this.winGame();
         }
+    }
+    winGame() {
+        $('.winner').addClass('active');
     }
     loseGame() {
         this.lose = true;
