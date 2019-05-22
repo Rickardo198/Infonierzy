@@ -24,7 +24,7 @@ class QuestionRepository extends ServiceEntityRepository
     }
 
     // /**
-    //  * @return Quesiton[] Returns an array of Quesiton objects
+    //  * @return Question[] Returns an array of Question objects
     //  */
     /*
     public function findByExampleField($value)
@@ -41,7 +41,7 @@ class QuestionRepository extends ServiceEntityRepository
     */
 
     /*
-    public function findOneBySomeField($value): ?Quesiton
+    public function findOneBySomeField($value): ?Question
     {
         return $this->createQueryBuilder('q')
             ->andWhere('q.exampleField = :val')

@@ -25,7 +25,10 @@ class BaseController extends AbstractController
     public function getQuestionByLevel(QuestionRepository $repository, Request $request)
     {
         $level = (int)$request->request->get('level');
+        if($level===null) return $this->json(false);
         $questions = $repository->getByDiffLevel($level);
-        dump($questions);
+        $len = sizeof($questions);
+        $rand = random_int(0,(!$len)?:0);
+        return $this->json($questions[$rand]);
     }
 }
